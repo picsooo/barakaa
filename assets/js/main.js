@@ -21,15 +21,16 @@
 
   // Gamme
   var P=[
-    {fr:'Fell N°2',ar:'فل',fam:'pates',lib:'Pâtes courtes',poids:'500 g',img:'fell-n2.webp',href:'produit.html'},
-    {fr:'Spaghetti 7',ar:'سباقيتي',fam:'pates',lib:'Pâtes longues',poids:'500 g',pk:'pk--long'},
-    {fr:'Rotelle',ar:'روتيلي',fam:'pates',lib:'Pâtes courtes'},
-    {fr:'Penne',fam:'pates',lib:'Pâtes courtes',poids:'500 g'},
-    {fr:'Lasagne',ar:'لازانيا',fam:'pates',lib:'Pâtes à gratiner',pk:'pk--plat'},
-    {fr:'Plomb',fam:'pates',lib:'Pâtes traditionnelles',poids:'500 g'},
-    {fr:'Couscous fin',ar:'كسكسي رقيق',fam:'couscous',lib:'Couscous',poids:'1 kg',pk:'pk--semoule pk--rouge'},
-    {fr:'Couscous moyen',ar:'كسكسي متوسط',fam:'couscous',lib:'Couscous',poids:'1 kg',pk:'pk--semoule'},
-    {fr:'Farine de blé tendre',ar:'فرينة',fam:'farine',lib:'Farine',poids:'1 kg',pk:'pk--farine'}
+    {fr:'Fell N°2',fam:'pates',lib:'Pâtes courtes',poids:'500 g',img:'p/fell.webp',href:'produit.html'},
+    {fr:'Plume',fam:'pates',lib:'Pâtes courtes',poids:'500 g',img:'p/plume.webp'},
+    {fr:'Radiatore',fam:'pates',lib:'Al dente en 10 min',poids:'400 g',img:'p/radiatore.webp'},
+    {fr:'Gnocchetti',fam:'pates',lib:'Pâtes en bronze, al dente en 13 min',poids:'500 g',img:'p/gnocchetti.webp'},
+    {fr:'Tlitli',fam:'pates',lib:'Pâtes traditionnelles',poids:'500 g',img:'p/tlitli.webp'},
+    {fr:'Trida',fam:'pates',lib:'Pâtes traditionnelles',poids:'500 g',img:'p/trida.webp'},
+    {fr:'Plomb',fam:'pates',lib:'Pâtes traditionnelles',poids:'500 g',img:'p/plomb.webp'},
+    {fr:'Cannelloni',fam:'pates',lib:'25 min au four',poids:'250 g',img:'p/cannelloni.webp'},
+    {fr:'Couscous moyen',fam:'couscous',lib:'Couscous',poids:'1 kg',img:'p/couscous-moyen.webp'},
+    {fr:'Couscous fin',fam:'couscous',lib:'Couscous',poids:'1 kg',img:'p/couscous-fin.webp'}
   ];
   var base=document.body.getAttribute('data-base')||'';
   function card(p){
@@ -40,7 +41,7 @@
   }
   document.querySelectorAll('[data-gamme]').forEach(function(g){
     var n=parseInt(g.getAttribute('data-gamme'),10)||P.length;
-    var list=n<P.length?[P[0],P[1],P[7],P[8]]:P;
+    var list=n<P.length?[P[0],P[2],P[8],P[9]]:P;
     g.innerHTML=list.map(card).join('');
   });
   var filt=document.querySelector('[data-filtres]');

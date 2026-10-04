@@ -19,15 +19,26 @@
 </header>
 
 <main id="haut">
-<section class="scene" id="scene">
-<div class="scene-ar" aria-hidden="true">البركة تجمعنا</div>
-<canvas id="pluie" aria-hidden="true"></canvas>
-<button class="paquet" id="paquet" aria-label="Ouvrir le paquet de Fell N°2"><img src="../assets/img/fell-n2.webp" alt="Paquet El Baraka Fell N°2" width="560" height="830"></button>
-<div class="scene-haut">
-<h1>Pâtes, couscous et farine d’Algérie</h1>
-<span class="astuce" id="astuce"><i></i>Touchez le paquet pour l’ouvrir</span>
-<div class="ouvre-info"><span class="compteur" id="compteur" aria-live="polite"><b id="nb">0</b> <span id="lib">pièces de Fell N°2</span></span><button class="btn btn-ligne rejouer" id="rejouer" style="color:#fff">Refermer</button></div>
+<section class="scene" id="scene" aria-roledescription="carrousel" aria-label="La gamme El Baraka">
+<div class="sc-fond" id="fond"></div>
+<div class="sc-vague" id="vague"></div>
+<canvas id="ciel" aria-hidden="true"></canvas>
+<div class="sc-defile" aria-hidden="true"><div class="sc-piste" id="piste"></div></div>
+<div class="sc-texte">
+<p class="sc-kicker">Pâtes, couscous et farine d’Algérie</p>
+<p class="sc-ar" id="tAr"></p>
+<h1 class="sc-nom" id="tNom"></h1>
+<p class="sc-info" id="tInfo"></p>
 </div>
+<div class="sc-scene" id="stage"></div>
+<canvas id="pluie" aria-hidden="true"></canvas>
+<div class="sc-nav">
+<button class="sc-fl" id="prev" aria-label="Produit précédent"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<div class="sc-pts" id="pts"></div>
+<button class="sc-fl" id="next" aria-label="Produit suivant"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+</div>
+<p class="sc-astuce" id="astuce"><i></i>Touchez le paquet pour le verser</p>
+<p class="sc-num" id="num"></p>
 </section>
 
 <section class="sec"><div class="wrap">
