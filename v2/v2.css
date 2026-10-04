@@ -88,3 +88,14 @@ body.v2{background:#041A0C;color:#EAF2E7}
 .v2-pied{text-align:center;padding:40px 20px 30px;font-size:.85rem;color:#7F9A82}
 .v2-pied img{height:46px;width:auto;margin:0 auto 14px}
 .v2-pied p{margin-inline:auto}
+
+.choix{display:flex;gap:8px;overflow-x:auto;padding:4px 20px;margin:14px -20px 0;scrollbar-width:none;justify-content:flex-start}
+.choix::-webkit-scrollbar{display:none}
+.choix button{flex:0 0 auto;font:400 .86rem var(--txt);color:#EAF2E7;background:rgba(4,26,12,.6);border:1.5px solid rgba(243,223,168,.3);padding:9px 15px;border-radius:999px;cursor:pointer;backdrop-filter:blur(6px)}
+.choix button[aria-pressed=true]{background:var(--ble);border-color:var(--ble);color:#041A0C;font-weight:500}
+@media(min-width:800px){.choix{justify-content:center;flex-wrap:wrap}}
+.paquet .pk-hero{width:84%;margin:0 auto;transform:none;box-shadow:0 40px 50px -10px rgba(0,0,0,.6)}
+.paquet .pk-hero .pk-band{font-size:clamp(.75rem,3.4vw,1.05rem)}
+.paquet--long{width:min(34vw,180px)}
+.paquet--plat{width:min(64vw,340px)}
+.paquet--plat .pk-hero{width:100%}
