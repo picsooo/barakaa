@@ -6,15 +6,7 @@
   var reduit=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var dpr=Math.min(window.devicePixelRatio||1,2),W=0,H=0,P=[],pile=[],COL=5,total=0,ouvert=false,raf=null,flux=0;
   var PR={
-    fell:{fr:'Fell N°2',ar:'فل',img:'fell-n2.webp',f:'tube',par:4,flux:110,h:4.6,u:'pièces de Fell N°2'},
-    spaghetti:{fr:'Spaghetti 7',ar:'سباقيتي',pk:'pk--long',f:'baton',par:2,flux:90,h:2.2,u:'spaghettis'},
-    rotelle:{fr:'Rotelle',ar:'روتيلي',f:'roue',par:3,flux:100,h:5,u:'pièces de Rotelle'},
-    penne:{fr:'Penne',f:'penne',par:4,flux:100,h:4.4,u:'pièces de Penne'},
-    lasagne:{fr:'Lasagne',ar:'لازانيا',pk:'pk--plat',f:'feuille',par:1,flux:40,h:6,u:'feuilles de Lasagne'},
-    plomb:{fr:'Plomb',f:'bille',par:8,flux:110,h:2.8,u:'grains de Plomb'},
-    cfin:{fr:'Couscous fin',ar:'كسكسي رقيق',pk:'pk--semoule pk--rouge',f:'grain',r:1.3,par:16,flux:130,h:1.1,u:'grains de couscous fin'},
-    cmoy:{fr:'Couscous moyen',ar:'كسكسي متوسط',pk:'pk--semoule',f:'grain',r:2,par:12,flux:130,h:1.5,u:'grains de couscous moyen'},
-    farine:{fr:'Farine',ar:'فرينة',pk:'pk--farine',f:'poudre',par:14,flux:120,h:1.1,u:'pincées de farine'}
+    fell:{fr:'Fell N°2',ar:'فل',img:'fell-n2.webp',f:'tube',par:4,flux:110,h:4.6,u:'pièces de Fell N°2'}
   };
   var cur='fell';
   function visuel(k){
@@ -137,15 +129,6 @@
   }
   pq.addEventListener('click',ouvre);
   rej.addEventListener('click',ferme);
-  var choix=document.getElementById('choix');
-  choix.innerHTML=Object.keys(PR).map(function(k){return '<button type="button" data-k="'+k+'" aria-pressed="'+(k===cur)+'">'+PR[k].fr+'</button>'}).join('');
-  choix.addEventListener('click',function(e){
-    var b=e.target.closest('button');if(!b)return;
-    cur=b.getAttribute('data-k');choix.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
-    choix.scrollTo({left:b.offsetLeft-choix.clientWidth/2+b.offsetWidth/2,behavior:'smooth'});
-    ferme();lib.textContent=PR[cur].u;visuel(cur);
-  });
-
   /* ---------- La table ---------- */
   var tab=document.getElementById('tableau'),out=document.getElementById('conv'),qte=document.getElementById('qte');
   var MAX=14,n=6,plat='couscous',as=[];
